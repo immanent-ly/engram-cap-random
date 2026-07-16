@@ -1,0 +1,25 @@
+[package]
+name = "cap-random"
+version = "1.0.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wit-bindgen-rt = { version = "0.39", features = ["bitflags"] }
+
+[package.metadata.component]
+package = "engram:cap-random"
+
+[package.metadata.component.target]
+path = "wit"
+world = "plugin"
+
+[package.metadata.component.target.dependencies]
+"wasi:random" = { path = "wit/deps/random" }
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true
