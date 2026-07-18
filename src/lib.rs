@@ -1,7 +1,6 @@
-//! Built-in random capability plugin. Wraps the allowlisted
-//! `wasi:random/random` import and exposes a single `next-u64` provider
-//! function. Deterministic replay comes from the runner journaling the
-//! result; the plugin itself is a thin pass-through.
+//! Official engram capability `random`. Provides the guest with randomness from
+//! the host. Exports the `engram:cap-random/provider` interface; imports are the
+//! allowlisted WASI interfaces declared in `wit/world.wit`.
 
 #[allow(warnings)]
 mod bindings;
