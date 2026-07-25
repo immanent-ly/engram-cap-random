@@ -10,7 +10,9 @@ Published through the [engram-capabilities](https://github.com/immanent-ly/engra
 
 ## Build
 
-    cargo component build --release --target wasm32-unknown-unknown
+```sh
+cargo component build --release --target wasm32-unknown-unknown
+```
 
 Artifact: `target/wasm32-unknown-unknown/release/cap_random.wasm`.
 
