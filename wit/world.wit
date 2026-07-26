@@ -1,4 +1,4 @@
-package engram:cap-random@1.0.0;
+package engram:cap-random@0.1.0;
 
 /// The random capability. A plugin component exports exactly one `provider`
 /// interface named `engram:cap-<name>/provider@<version>`; the runner links its

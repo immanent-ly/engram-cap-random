@@ -1,6 +1,7 @@
 # engram-cap-random
 
 Official engram capability `random`. Provides the guest with randomness from the host.
+
 Published through the [engram-capabilities](https://github.com/immanent-ly/engram-capabilities) registry.
 
 ## Interface

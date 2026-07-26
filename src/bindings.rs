@@ -112,16 +112,16 @@ pub mod exports {
                     fn next_u64() -> u64;
                 }
                 #[doc(hidden)]
-                macro_rules! __export_engram_cap_random_provider_1_0_0_cabi {
+                macro_rules! __export_engram_cap_random_provider_0_1_0_cabi {
                     ($ty:ident with_types_in $($path_to_types:tt)*) => {
                         const _ : () = { #[unsafe (export_name =
-                        "engram:cap-random/provider@1.0.0#next-u64")] unsafe extern "C"
+                        "engram:cap-random/provider@0.1.0#next-u64")] unsafe extern "C"
                         fn export_next_u64() -> i64 { unsafe { $($path_to_types)*::
                         _export_next_u64_cabi::<$ty > () } } };
                     };
                 }
                 #[doc(hidden)]
-                pub(crate) use __export_engram_cap_random_provider_1_0_0_cabi;
+                pub(crate) use __export_engram_cap_random_provider_0_1_0_cabi;
             }
         }
     }
@@ -183,7 +183,7 @@ macro_rules! __export_plugin_impl {
     };
     ($ty:ident with_types_in $($path_to_types_root:tt)*) => {
         $($path_to_types_root)*::
-        exports::engram::cap_random::provider::__export_engram_cap_random_provider_1_0_0_cabi!($ty
+        exports::engram::cap_random::provider::__export_engram_cap_random_provider_0_1_0_cabi!($ty
         with_types_in $($path_to_types_root)*:: exports::engram::cap_random::provider);
     };
 }
@@ -191,7 +191,7 @@ macro_rules! __export_plugin_impl {
 pub(crate) use __export_plugin_impl as export;
 #[cfg(target_arch = "wasm32")]
 #[unsafe(
-    link_section = "component-type:wit-bindgen:0.41.0:engram:cap-random@1.0.0:plugin:encoded world"
+    link_section = "component-type:wit-bindgen:0.41.0:engram:cap-random@0.1.0:plugin:encoded world"
 )]
 #[doc(hidden)]
 #[allow(clippy::octal_escapes)]
@@ -199,8 +199,8 @@ pub static __WIT_BINDGEN_COMPONENT_TYPE: [u8; 314] = *b"\
 \0asm\x0d\0\x01\0\0\x19\x16wit-component-encoding\x04\0\x07\xbd\x01\x01A\x02\x01\
 A\x04\x01B\x05\x01p}\x01@\x01\x03lenw\0\0\x04\0\x10get-random-bytes\x01\x01\x01@\
 \0\0w\x04\0\x0eget-random-u64\x01\x02\x03\0\x18wasi:random/random@0.2.6\x05\0\x01\
-B\x02\x01@\0\0w\x04\0\x08next-u64\x01\0\x04\0\x20engram:cap-random/provider@1.0.\
-0\x05\x01\x04\0\x1eengram:cap-random/plugin@1.0.0\x04\0\x0b\x0c\x01\0\x06plugin\x03\
+B\x02\x01@\0\0w\x04\0\x08next-u64\x01\0\x04\0\x20engram:cap-random/provider@0.1.\
+0\x05\x01\x04\0\x1eengram:cap-random/plugin@0.1.0\x04\0\x0b\x0c\x01\0\x06plugin\x03\
 \0\0\0G\x09producers\x01\x0cprocessed-by\x02\x0dwit-component\x070.227.1\x10wit-\
 bindgen-rust\x060.41.0";
 #[inline(never)]
